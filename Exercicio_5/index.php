@@ -34,9 +34,9 @@ Caso contrário, retornar a frase em azul
             // Verifica se é um palíndromo strrev -> inverte string 
             // para ser um palindromo a palavra invertida deve ser igual a ela normal
             if ($cleanString === strrev($cleanString)) {
-                echo '<h4 class="mt-4 palindrome">"' . htmlspecialchars($string) . '" é um palíndromo!</h4>';
+                echo "<h4 class='mt-4 palindrome'>" . $string . " é um palíndromo!</h4>";
             } else {
-                echo '<h4 class="mt-4 not-palindrome">"' . htmlspecialchars($string) . '" não é um palíndromo.</h4>';
+                echo "<h4 class='mt-4 not-palindrome'>" . $string . " não é um palíndromo.</h4>";
             }
         }
         ?>
