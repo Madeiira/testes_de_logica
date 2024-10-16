@@ -26,6 +26,15 @@ PS.: Se a frase possuir mais de uma palavra com a mesma quantidade de caracteres
             $maiorPalavra = '';
             $maiorPalavras = [];
 
+            // Encontrando a maior palavra
+            foreach ($phraseArray as $palavra) {
+                if (strlen($palavra) > strlen($maiorPalavra)) {
+                    $maiorPalavra = $palavra;
+                    $maiorPalavras = [$palavra]; // Reinicializa a lista com a nova maior palavra
+                } elseif (strlen($palavra) == strlen($maiorPalavra)) {
+                    $maiorPalavras[] = $palavra; // Adiciona a palavra à lista se tiver o mesmo comprimento
+                }
+            }
 
         }
     ?>
