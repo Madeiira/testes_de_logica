@@ -24,7 +24,9 @@ testada:
         $word = strtolower($_POST['word']);
         $vowels = array("a", "e", "i", "o", "u");
         $result = str_replace($vowels, '', $word);
-
+        echo "<h2 class='mt-4'>Resultado:</h2>";
+        echo "<p>Palavra original: <strong>$word</strong></p>";
+        echo "<p>Sem vogais: <strong>$result</strong></p>";
     }
     ?>
 </div>
