@@ -21,7 +21,20 @@ Crie uma página em HTML e PHP ou JAVASCRIPT que receba um valor numérico maior
         <button type="submit" class="btn btn-primary btn-block">Somar digitos</button>
     </form>
 
-    
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $number = $_POST['number'];
+        // Certificando-se de que o número é maior que zero
+        if ($number > 0) {
+            $sum = 0;
+
+            // Calculando a soma dos dígitos
+   
+        } else {
+             echo 'Por favor, insira um número maior que zero.';
+        }
+        }
+    ?
 </div>
 
 <?php include '../public/partials/footer.php'; ?>
