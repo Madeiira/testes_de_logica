@@ -14,12 +14,15 @@ Ao clicar em OK, uma função deverá retornar a soma de todos os números ENTRE
 <?php include '../public/partials/header.php'; ?>
 
 <div class="container mt-5">
-    <h1 class="text-center"></h1>
+    <h1 class="text-center">Soma de numeros inteiros</h1>
     <form method="post" class="mt-4">
         <div class="form-group">
-            <input type="text" name="" class="form-control" placeholder="" required>
+            <input type="text" name="" class="form-control" placeholder="Digite o primeiro numero" required>
         </div>
-        <button type="submit" class="btn btn-primary btn-block"></button>
+        <div class="form-group">
+            <input type="text" name="" class="form-control" placeholder="Digite o Segundo numero" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Executar</button>
     </form>
 </div>
 
