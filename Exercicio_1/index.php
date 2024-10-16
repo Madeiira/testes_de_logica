@@ -22,6 +22,8 @@ testada:
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $word = strtolower($_POST['word']);
+        $vowels = array("a", "e", "i", "o", "u");
+        $result = str_replace($vowels, '', $word);
 
     }
     ?>
