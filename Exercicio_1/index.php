@@ -19,7 +19,12 @@ testada:
         <button type="submit" class="btn btn-primary btn-block">Remover Vogais</button>
     </form>
 
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $word = strtolower($_POST['word']);
 
+    }
+    ?>
 </div>
 
 <?php include '../public/partials/footer.php'; ?>
