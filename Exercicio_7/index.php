@@ -17,13 +17,38 @@ Ao clicar em OK, uma função deverá retornar a soma de todos os números ENTRE
     <h1 class="text-center">Soma de numeros inteiros</h1>
     <form method="post" class="mt-4">
         <div class="form-group">
-            <input type="text" name="" class="form-control" placeholder="Digite o primeiro numero" required>
+            <input type="number" name="num1" class="form-control" placeholder="Digite o primeiro numero" required>
         </div>
         <div class="form-group">
-            <input type="text" name="" class="form-control" placeholder="Digite o Segundo numero" required>
+            <input type="number" name="num2" class="form-control" placeholder="Digite o Segundo numero" required>
         </div>
         <button type="submit" class="btn btn-primary btn-block">Executar</button>
     </form>
+    <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $num1 = (int)$_POST['num1'];
+            $num2 = (int)$_POST['num2'];
+            
+            // Se os números forem iguais
+            if ($num1 == $num2) {
+                $resultado = $num1;
+            } 
+            // Se o segundo número for menor que o primeiro
+            elseif ($num2 < $num1) {
+                $resultado = 0;
+            } 
+            // Se os números forem diferentes e o segundo for maior que o primeiro
+            else {
+                $soma = 0;
+                for ($i = $num1; $i <= $num2; $i++) {
+                    $soma += $i;
+                }
+                $resultado = $soma;
+            }
+
+            echo "<div class='alert alert-info mt-4'>Resultado: <strong>$resultado</strong></div>";
+        }
+        ?>
 </div>
 
 <?php include '../public/partials/footer.php'; ?>
