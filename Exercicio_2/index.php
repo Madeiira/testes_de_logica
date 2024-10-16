@@ -36,6 +36,9 @@ PS.: Se a frase possuir mais de uma palavra com a mesma quantidade de caracteres
                 }
             }
 
+            // Exibindo o resultado
+            echo '<h4 class="mt-4">A(s) maior(es) palavra(s):</h4>';
+            echo '<p>' . implode(', ', $maiorPalavras) . '</p>';
         }
     ?>
 
