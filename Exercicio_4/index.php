@@ -19,7 +19,28 @@ Crie uma página em HTML e PHP ou JAVASCRIPT que receba um valor numérico intei
         </div>
         <button type="submit" class="btn btn-primary btn-block">Substituir Numeros</button>
     </form>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $number = $_POST['number'];
 
+        // Verifica se o número é maior que zero
+        if ($number > 0) {
+            for ($i = 1; $i <= $number; $i++) {
+                if ($i % 3 == 0 && $i % 5 == 0) {
+                    echo "HELLO WORLD<br>";
+                } elseif ($i % 3 == 0) {
+                    echo "HELLO<br>";
+                } elseif ($i % 5 == 0) {
+                    echo "WORLD<br>";
+                } else {
+                    echo $i . "<br>";
+                }
+            }
+        } else {
+            echo 'Por favor, insira um número maior que zero.';
+        }
+    }
+    ?>
 </div>
 
 <?php include '../public/partials/footer.php'; ?>
