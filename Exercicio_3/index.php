@@ -13,14 +13,15 @@ Crie uma página em HTML e PHP ou JAVASCRIPT que receba um valor numérico maior
 <?php include '../public/partials/header.php'; ?>
 
 <div class="container mt-5">
-    <h1 class="text-center"></h1>
+    <h1 class="text-center">soma de todos os dígitos</h1>
     <form method="post" class="mt-4">
         <div class="form-group">
-            <input type="text" name="" class="form-control" placeholder="" required>
-
+            <input type="text" name="number" class="form-control" placeholder="Digite um numero" required>
         </div>
-        <button type="submit" class="btn btn-primary btn-block"></button>
+        <button type="submit" class="btn btn-primary btn-block">Somar digitos</button>
     </form>
+
+    
 </div>
 
 <?php include '../public/partials/footer.php'; ?>
