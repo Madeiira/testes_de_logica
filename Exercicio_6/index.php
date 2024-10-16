@@ -1,13 +1,20 @@
 <!-- 
-Exercício 6
+Exercício 5
 
-Agora, crie uma página similar ao exercício 5, porém altere a lógica do exercício anterior para que ele verifique se a palavra e/ou frase inserida no campo de texto pode
-se tornar um palíndromo se UMA letra da palavra e/ou frase for removida
+Crie uma página em HTML e PHP ou JAVASCRIPT que receba um valor de uma string e verifique se ela é um palíndromo. 
 
+Retornar a frase em vermelho caso a palavra e/ou frase não for um palíndromo.
+
+Caso contrário, retornar a frase em azul
+
+ ● aibofobia - É um palíndromo
+ ● omissíssimos - Não é um palíndromo
+ ● Gustavo Fernandes - Não é um palíndromo
+ ● Anotaram a data da maratona - É um palíndromo
+ ● remviver - Não é um palíndromo
 -->
 
 <?php include '../public/partials/header.php'; ?>
-
 <link href="css/style.css" rel="stylesheet">
 
 <div class="container mt-5">
