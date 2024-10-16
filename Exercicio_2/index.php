@@ -20,7 +20,15 @@ PS.: Se a frase possuir mais de uma palavra com a mesma quantidade de caracteres
         </div>
         <button type="submit" class="btn btn-primary btn-block">Mostrar Palavra(s)</button>
     </form>
+    <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $phraseArray = explode(' ', $_POST['phrase']);
+            $maiorPalavra = '';
+            $maiorPalavras = [];
 
+
+        }
+    ?>
 
 </div>
 
